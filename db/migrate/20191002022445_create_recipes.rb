@@ -1,6 +1,6 @@
 class CreateRecipes < ActiveRecord::Migration
   def change
-    create_table :recipes |t|
-      
+    create_table :recipes do |t|
+      t.
   end
 end
