@@ -13,31 +13,31 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/recipes' do
-    recipe = Recipe.create(name: params[:name], ingredients: params[:ingredients], cooktime: params[:cooktime])
+    recipe = Recipe.create(name: params[:name], ingredients: params[:ingredients], cook_time: params[:cook_time])
     
-    redirect to "/articles/#{article.id}"
+    redirect to "/recipes/#{recipe.id}"
   end
   
   get '/recipes' do
-    @articles = Article.all
+    @recipes = Recipe.all
     erb :index
   end
   
   get '/recipes/:id' do
-    @article = Article.find(params[:id])
+    @recipe = Recipe.find(params[:id])
     erb :show
   end
   
   get '/recipes/:id/edit' do
-    @article = Article.find_by_id(params[:id])
+    @recipes = Recipe.find_by_id(params[:id])
     erb :edit
   end
  
   patch '/recipes/:id' do 
-    @article = Article.find_by_id(params[:id])
-    @article.title = params[:title]
-    @article.content = params[:content]
-    @article.save
+    @recipe = Recipe.find_by_id(params[:id])
+    @recipe.name = params[:title]
+    @recipe.content = params[:content]
+    @recipe.save
     redirect to "/recipes/#{@article.id}"
   end
   
