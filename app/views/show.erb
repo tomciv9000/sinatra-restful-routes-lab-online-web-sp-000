@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1><% @recipe.name %></h1>
-    <% %>
-  
+    <h1><%= @recipe.name %></h1>
+    <h3>Ingredients:</h3>
+    <p><%= @recipe.ingredients %></p>
+    <p></p>
+    <p>Cook Time: <%= @recipe.cook_time %></p>
   </body>
 </html>
