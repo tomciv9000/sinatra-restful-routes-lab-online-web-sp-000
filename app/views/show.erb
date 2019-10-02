@@ -7,8 +7,8 @@
     <p></p>
     <p>Cook Time: <%= @recipe.cook_time %></p>
     <form action="/recipess/<%= @recipe.id %>" method="post">
-  <input id="hidden" type="hidden" name="_method" value="delete">
-  <input type="submit" value="delete">
-</form>
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete">
+    </form>
   </body>
 </html>
