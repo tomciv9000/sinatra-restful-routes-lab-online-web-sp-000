@@ -1,1 +1,1 @@
-class Recipe << ActiveRecord::Base
+class Recipe < ActiveRecord::Base
